@@ -1,6 +1,4 @@
-import React from 'react'
-
-export default function MainForecastPanel() {
+export default function MainForecastPanel({dailyForecastData}) {
   return (
     <div id="main-forecast-panel" className='flex flex-col h-screen w-1/4 bg-white-2/65 p-10 justify-center space-y-4'>
       {/* <button></button> */}
@@ -13,8 +11,8 @@ export default function MainForecastPanel() {
       <img src="assets/weather-icons/Rain.png" alt="" />
 
       <div id="forecast">
-        <h3 className='text-lg'>Cloudy</h3>
-        <p className='text-6xl'>76°F</p>
+        <h3 className='text-lg'>{dailyForecastData[0].shortForecast}</h3>
+        <p className='text-6xl'>{dailyForecastData[0].temperature}°F</p>
       </div>
     </div>
   )
