@@ -29,12 +29,7 @@ export default function Dashboard() {
   return (
     <main className={`flex min-h-screen items-center justify-between ${inter.className} bg-gradient-to-br from-[#027baa] to-[#f99c9a] text-black`}>
     
-    {/* Loading message to prevent error on inital page load, pre-data fetch */}
-    {dailyForecastData.length > 0 ? (
-        <MainForecastPanel dailyForecastData={dailyForecastData} />
-      ) : (
-        <p>Loading...</p>
-      )}
+      <MainForecastPanel dailyForecastData={dailyForecastData} />
 
       <div id="forecast-overview-panel" className='flex flex-col'>
 
