@@ -1,6 +1,7 @@
 import { fetchHourlyForecastData } from '@/utils/fetchHourlyForecastData';
 import { useState, useEffect } from 'react';
 import LoadingSpinner from './LoadingSpinner';
+import chooseWeatherIcon from '@/utils/chooseWeatherIcon';
 
 export default function HourlyConditions() {
   const [hourlyForecastData, setHourlyForecastData] = useState([])
@@ -45,7 +46,7 @@ export default function HourlyConditions() {
             <div key={index} className='flex flex-col items-center bg-white/65 py-1 px-2 rounded-lg justify-around relative'>
               <p className='text-md'>{convertToHours(item.startTime)}</p>
               <hr className="h-[1px] w-[80%] text-black/70 pb-3"></hr>
-              <img className='w-[35px] pb-3' src="assets/weather-icons/Rain.png" alt="" />
+              <img className='w-[35px] pb-3' src={chooseWeatherIcon(item.shortForecast)} alt="" />
               <p className='text-2xl font-medium'>{item.temperature}°F</p>
             </div>
           )

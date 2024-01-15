@@ -1,4 +1,5 @@
 import LoadingSpinner from "./LoadingSpinner"
+import chooseWeatherIcon from "@/utils/chooseWeatherIcon"
 
 export default function MainForecastPanel({dailyForecastData}) {
 
@@ -19,7 +20,7 @@ export default function MainForecastPanel({dailyForecastData}) {
         <p className='text-lg'>Tomorrow</p>
       </div>
 
-      <img src="assets/weather-icons/Rain.png" alt="" />
+      <img src={chooseWeatherIcon(dailyForecastData[0].shortForecast)} alt={`${dailyForecastData[0].shortForecast} icon`} />
 
       <div id="forecast">
         <p className='text-7xl'>{dailyForecastData[0].temperature}°F</p>
