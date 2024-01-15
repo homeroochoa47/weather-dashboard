@@ -1,5 +1,6 @@
 import MainForecastPanel from '@/components/MainForecastPanel'
 import DailyConditions from '@/components/DailyConditions'
+import HourlyConditions from '@/components/HourlyConditions'
 import { fetchDailyForecastData } from '@/utils/fetchDailyForecastData'
 
 import { Montserrat } from 'next/font/google'
@@ -31,9 +32,16 @@ export default function Dashboard() {
     
       <MainForecastPanel dailyForecastData={dailyForecastData} />
 
-      <div id="forecast-overview-panel" className='flex flex-col w-[70%] mx-auto max-w-4xl h-[90vh] justify-evenly'>
-        <DailyConditions dailyForecastData={dailyForecastData} />
+      <div className='flex flex-col w-full justify-evenly h-[90vh]'>
+        <div id="forecast-overview-panel" className='flex flex-col w-[80%] mx-auto max-w-4xl justify-evenly'>
+          <DailyConditions dailyForecastData={dailyForecastData} />
+        </div>
+
+        <div id="forecast-overview-panel" className='flex flex-col w-[80%] mx-auto max-w-4xl justify-evenly'>
+          <HourlyConditions />
+        </div>
       </div>
+      
 
     </main>
   )
