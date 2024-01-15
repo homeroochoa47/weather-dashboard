@@ -32,12 +32,20 @@ export default function Dashboard() {
     
       <MainForecastPanel dailyForecastData={dailyForecastData} />
 
-      <div className='flex flex-col w-full justify-evenly h-[90vh]'>
-        <div id="forecast-overview-panel" className='flex flex-col w-[80%] mx-auto max-w-4xl justify-evenly'>
+      <div className='flex flex-col items-center justify-evenly h-[90vh] w-full'>
+        
+        <div className='flex flex-col w-[80%]'>
+          <p className='text-xl font-medium'>Tomorrows's Forecast:</p>
+          <div id="forecast-block" className='flex flex-col bg-white/65 p-3 rounded-lg justify-around relative'>
+            <h3 className='text-black'>{dailyForecastData[0]?.detailedForecast}</h3>
+          </div>
+        </div>
+
+        <div id="forecast-overview-panel" className='flex flex-col w-[80%] max-w-4xl justify-evenly'>
           <DailyConditions dailyForecastData={dailyForecastData} />
         </div>
 
-        <div id="forecast-overview-panel" className='flex flex-col w-[80%] mx-auto max-w-4xl justify-evenly'>
+        <div id="forecast-overview-panel" className='flex flex-col w-[80%] max-w-4xl justify-evenly'>
           <HourlyConditions />
         </div>
       </div>
