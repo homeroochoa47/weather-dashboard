@@ -2,7 +2,7 @@ import axios from 'axios';
 import formatDate from './formatDate';
 
 export async function fetchHourlyForecastData() {
-  const apiUrl = "https://api.weather.gov/gridpoints/AKQ/45,84/forecast/hourly"
+  const apiUrl = "https://api.weather.gov/gridpoints/AKQ/43,86/forecast/hourly"
   try {
     const response = await axios.get(apiUrl);
     const filteredWeatherData = filterApiData(response.data.properties.periods)
