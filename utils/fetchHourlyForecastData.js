@@ -1,4 +1,5 @@
 import axios from 'axios';
+import formatDate from './formatDate';
 
 export async function fetchHourlyForecastData() {
   const apiUrl = "https://api.weather.gov/gridpoints/AKQ/45,84/forecast/hourly"
@@ -18,7 +19,7 @@ const filterApiData = (apiResponseData) => {
   tomorrowsDate.setDate(currentDate.getDate() + 1);
 
   // Format tomorrow's date to match the ISO format from the API response object
-  const tomorrowsDateFormatted = tomorrowsDate.toISOString().split('T')[0];
+  const tomorrowsDateFormatted = formatDate(tomorrowsDate)
 
   // Filter to only include data for the following day and the specified time range (4AM to 12AM)
   const filteredWeatherData = apiResponseData.filter(period => {
