@@ -22,14 +22,27 @@
 - Made with Next.JS/React using the pages directory.
 - Styling done with [Tailwind CSS](https://tailwindcss.com)
 - Data Sourced from the [National Weather Service API](https://www.weather.gov/documentation/services-web-api)
-- Auto Data refetch occurring every 10 minutes, or manually on page refresh.
+- Auto data refetch occurring every 10 minutes, or manually on page refresh.
+- Sample dropdown menu with search bar & saved cities (search functionality not added).
 
 <br />
 <br />
 
 # Getting Started
 
-First, run the development server:
+Install any dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+To run the development server:
 
 ```bash
 npm run dev
