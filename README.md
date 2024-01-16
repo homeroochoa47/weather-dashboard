@@ -11,7 +11,12 @@
 </p>
 <br />
 
+## Original Figma Design:
 
+<img src="https://github.com/homeroochoa47/weather-dashboard/assets/104741653/50ae1246-c215-4fbc-ace8-f267f95e4c60" width=60% height=60%>
+
+<br />
+<br />
 
 # Features
 - Made with Next.JS/React using the pages directory.
