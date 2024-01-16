@@ -39,7 +39,7 @@ export default function HourlyConditions() {
 
   return (
     <div id="daily-conditions" className='w-full'>
-      <p className='text-lg lg:text-xl font-medium'>Tomorrow's Hourly Report:</p>
+      <h2 className='text-lg lg:text-xl font-medium'>Tomorrow's Hourly Report:</h2>
       <div id="cards" className='grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-5'>
         {hourlyForecastData.map((item, index) => {
           return(
