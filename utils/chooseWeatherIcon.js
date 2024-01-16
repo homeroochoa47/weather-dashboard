@@ -1,3 +1,5 @@
+//takes in a forecast based on the wording received in the API.
+//whis was a short-form solution aiming for efficiency as opposed to greater detail requiring more icons and complexity.
 export default function chooseWeatherIcon(forecast) {
   if (forecast.includes("Snow")) {
       return "assets/weather-icons/snow.png";

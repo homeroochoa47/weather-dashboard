@@ -12,7 +12,7 @@ export async function fetchHourlyForecastData() {
   }
 }
 
-// retreives necessary data to parse through json to find the correct data
+// formats the dates to parse through json to find the correct data.
 const filterApiData = (apiResponseData) => {
   const currentDate = new Date();
   const tomorrowsDate = new Date();
@@ -21,7 +21,7 @@ const filterApiData = (apiResponseData) => {
   // Format tomorrow's date to match the ISO format from the API response object
   const tomorrowsDateFormatted = formatDate(tomorrowsDate)
 
-  // Filter to only include data for the following day and the specified time range (4AM to 12AM)
+  // Filter to only include data for the following day and the specified time range
   const filteredWeatherData = apiResponseData.filter(period => {
     const startTime = new Date(period.startTime);
     const startHour = startTime.getHours();
