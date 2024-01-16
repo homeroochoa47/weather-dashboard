@@ -1,15 +1,9 @@
-<p align="center">
+<h1 align="left">
   <strong>Weather App made with with <a href="https://nextjs.org">Next.js</a></strong><br />
+</h1>
+<p align="left">
+  This app displays weather in a dashboard format for the following day in Ashland, Va.<br />
 </p>
-<p align="center">
-  <strong>This app displays weather in a dashboard format for the following day in Ashland, Va.</strong><br />
-</p>
-
-<p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-getting-started">Getting Started</a>
-</p>
-<br />
 
 ## Original Figma Design:
 
