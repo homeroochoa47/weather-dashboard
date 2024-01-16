@@ -39,15 +39,15 @@ export default function HourlyConditions() {
 
   return (
     <div id="daily-conditions" className='w-full'>
-      <p className='text-xl font-medium'>Hourly Conditions:</p>
-      <div id="cards" className='grid grid-cols-6 gap-5'>
+      <p className='text-lg lg:text-xl font-medium'>Tomorrow's Hourly Report:</p>
+      <div id="cards" className='grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-5'>
         {hourlyForecastData.map((item, index) => {
           return(
             <div key={index} className='flex flex-col items-center bg-white/65 py-1 px-2 rounded-lg justify-around relative'>
               <p className='text-md'>{convertToHours(item.startTime)}</p>
               <hr className="h-[1px] w-[80%] text-black/70 pb-3"></hr>
               <img className='w-[35px] pb-3' src={chooseWeatherIcon(item.shortForecast)} alt="" />
-              <p className='text-2xl font-medium'>{item.temperature}°F</p>
+              <p className='text-xl md:text-2xl font-medium'>{item.temperature}°F</p>
             </div>
           )
         })}

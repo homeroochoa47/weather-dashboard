@@ -11,14 +11,14 @@ export default function DailyConditions({dailyForecastData}) {
   }
 
   return (
-    <div id="daily-conditions" className='w-full'>
-      <p className='text-xl font-medium'>Tomorrows's Conditions:</p>
-      <div id="cards" className='grid grid-cols-3 gap-5 h-48'>
+    <div id="daily-conditions" className='w-full flex flex-col'>
+      <p className='text-lg lg:text-xl font-medium'>Tomorrows's Conditions:</p>
 
+      <div id="cards" className='grid grid-cols-1 md:grid-cols-3 gap-5 md:h-32 lg:h-40 xl:h-48'>
         {/* Wind Conditions */}
-        <div id="wind-card" className='flex flex-col bg-white/65 px-4 rounded-lg justify-around relative pt-14'>
-          <h3 className='text-xl font-medium text-black/70 absolute top-3 left-4'>Wind Status</h3>
-          <h4 className='text-5xl font-normal tracking-tighter'>{dailyForecastData[0].windSpeed.split('m')[0]} <span className='text-lg tracking-normal'>mph</span></h4>
+        <div id="wind-card" className='flex flex-col bg-white/65 px-4 rounded-lg justify-around relative pt-8 lg:pt-14 pb-3 md:pb-0 space-y-1'>
+          <h3 className='text-md lg:text-xl font-medium text-black/70 absolute top-3 left-4'>Wind Status</h3>
+          <h4 className='text-3xl xl:text-5xl font-normal tracking-tighter'>{dailyForecastData[0].windSpeed.split('m')[0]} <span className='text-lg tracking-normal'>mph</span></h4>
           <div id="wind=direction" className='flex space-x-2 items-center'>
             <img className='w-[25px]' src="assets/weather-icons/compass.svg" alt="" />
             <p className='font-medium'>{dailyForecastData[0].windDirection}</p>
@@ -26,16 +26,16 @@ export default function DailyConditions({dailyForecastData}) {
         </div>
 
         {/* Humidity */}
-        <div id="humidity-card" className='flex flex-col bg-white/65 px-4 rounded-lg justify-around relative pt-14'>
-          <h3 className='text-xl font-medium text-black/70 absolute top-3 left-4'>Humidity</h3>
-          <h4 className='text-5xl font-normal'>{dailyForecastData[0].relativeHumidity.value} <span className='text-lg -ml-2'>%</span></h4>
+        <div id="humidity-card" className='flex flex-col bg-white/65 px-4 rounded-lg justify-around relative pt-8 lg:pt-14 pb-3 md:pb-0 space-y-1'>
+          <h3 className='text-md lg:text-xl font-medium text-black/70 absolute top-3 left-4'>Humidity</h3>
+          <h4 className='text-3xl xl:text-5xl font-normal'>{dailyForecastData[0].relativeHumidity.value} <span className='text-lg -ml-2'>%</span></h4>
           <p className='font-medium'>Fair</p>
         </div>
 
         {/* Rain */}
-        <div id="precipitation-card" className='flex flex-col bg-white/65 px-4 rounded-lg justify-around relative pt-14'>
-          <h3 className='text-xl font-medium text-black/70 absolute top-3 left-4'>Precipitation</h3>
-          <h4 className='text-5xl font-normal'>{dailyForecastData[0].probabilityOfPrecipitation.value} <span className='text-lg -ml-2'>%</span></h4>
+        <div id="precipitation-card" className='flex flex-col bg-white/65 px-4 rounded-lg justify-around relative pt-8 lg:pt-14 pb-3 md:pb-0 space-y-1'>
+          <h3 className='text-md lg:text-xl font-medium text-black/70 absolute top-3 left-4'>Precipitation</h3>
+          <h4 className='text-3xl xl:text-5xl font-normal'>{dailyForecastData[0].probabilityOfPrecipitation.value} <span className='text-lg -ml-2'>%</span></h4>
           <p className=''></p>
         </div>
       </div>
