@@ -5,7 +5,6 @@ export default function Dropdown() {
 
   const handleMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen)
-    console.log(isMenuOpen)
   }
 
   return (

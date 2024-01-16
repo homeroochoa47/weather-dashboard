@@ -12,7 +12,7 @@ export async function fetchDailyForecastData() {
   }
 }
 
-// retreives necessary data to parse through json to find the correct data
+// formats the dates to parse through json to find the correct data.
 const filterApiData = (apiResponseData) => {
   const currentDate = new Date()
   const tomorrowsDate = new Date()
@@ -22,7 +22,6 @@ const filterApiData = (apiResponseData) => {
   // format tomorrows date to match the ISO format from the api response object
   const tomorrowsDateFormatted = formatDate(tomorrowsDate)
 
-  // console.log(tomorrowsDateFormatted)
 
   // Filter to only include data for the following day.
   const filteredWeatherData = apiResponseData.filter(period => {
