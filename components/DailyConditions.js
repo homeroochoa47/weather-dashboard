@@ -35,7 +35,8 @@ export default function DailyConditions({dailyForecastData}) {
         {/* Rain */}
         <div id="precipitation-card" className='flex flex-col bg-white/65 px-4 rounded-lg justify-around relative pt-8 lg:pt-14 pb-3 md:pb-0 space-y-1'>
           <h4 className='text-md lg:text-xl font-medium text-black/70 absolute top-3 left-4'>Precipitation</h4>
-          <h5 className='text-3xl xl:text-5xl font-normal'>{dailyForecastData[0].probabilityOfPrecipitation.value} <span className='text-lg -ml-2'>%</span></h5>
+          {/* If the API returns null as the chance of precipitation, render 0 */}
+          <h5 className='text-3xl xl:text-5xl font-normal'>{dailyForecastData[0].probabilityOfPrecipitation.value !== null ? dailyForecastData[0].probabilityOfPrecipitation.value : "0"} <span className='text-lg -ml-2'>%</span></h5>
           <p></p>
         </div>
       </div>
